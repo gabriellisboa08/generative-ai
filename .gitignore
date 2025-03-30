@@ -1,0 +1,25 @@
+# Arquivos gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+develop-eggs/
+venv/
+.env
+
+# Arquivos de log
+*.log
+knowledge_loader.log
+chat_history
+
+# Arquivos de ambiente do VS Code
+.vscode/
+
+# Outros arquivos e diretórios que você pode querer ignorar
+*.sqlite
+*.db
+*.csv
+*.json
