@@ -1,5 +1,5 @@
 import streamlit as st
-from process_input_and_generate_ai_response import process_input_and_generate_ai_response
+from AIResponseProcessor import AIResponseProcessor
 import shelve
 
 
@@ -48,7 +48,8 @@ if prompt := st.chat_input("Como posso ajudar?"):
         st.markdown(prompt)
 
     # Processar a resposta da IA
-    ia_response = process_input_and_generate_ai_response(prompt)
+    
+    ia_response = AIResponseProcessor().process_input_and_generate_response(prompt)
 
     # Adicionar a resposta da IA ao histórico
     st.session_state.messages.append({"role": "assistant", "content": ia_response})
