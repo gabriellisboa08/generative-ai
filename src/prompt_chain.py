@@ -1,4 +1,4 @@
-from src.llm import model as llm
+from src.ai_integration import LLMManager
 
 
 from langchain.prompts.chat import ChatPromptTemplate
@@ -14,7 +14,7 @@ def create_prompt_chain(context, q):
     prompt_template = ChatPromptTemplate.from_template(rag_template)
     
     # Criar a sequência de execução
-    chain =  prompt_template | llm
+    chain =  prompt_template | LLMManager()
     
     # Retornar a cadeia de prompts
     return chain
