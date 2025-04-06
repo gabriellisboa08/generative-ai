@@ -21,25 +21,15 @@ class PDFLoader:
         self.logger = logging.getLogger(__name__)
 
     def load_pdf_documents_from_directory_paths(self, directory_paths: str) -> list:
-        """
-        Carrega documentos PDF de uma lista de caminhos de diretórios.
 
-        :param directory_paths: Caminhos dos diretórios separados por vírgula.
-        :return: Lista de documentos carregados.
-        """
         document_list = []
         directory_paths = [directory_path.strip() for directory_path in directory_paths.split(',')]
         for directory_path in directory_paths:
-            document_list.extend(self._load_documents_pdf_from_path(directory_path))
+            document_list.extend(self.load_documents_pdf_from_path(directory_path))
         return document_list
 
-    def _load_documents_pdf_from_path(self, directory_path: str) -> list:
-        """
-        Carrega documentos PDF de um único diretório.
+    def load_documents_pdf_from_path(self, directory_path: str) -> list:
 
-        :param directory_path: Caminho do diretório.
-        :return: Lista de documentos carregados.
-        """
         documents = []
         try:
             for filename in os.listdir(directory_path):
