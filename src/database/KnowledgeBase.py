@@ -1,6 +1,6 @@
-from data_processing.PDFLoader import PDFLoader
-from data_processing.WebLoader import WebLoader
-from config import KNOWLEDGE_PDF_PATH, KNOWLEDGE_WEB_URL_PATH
+from src.data_processing.PDFLoader import PDFLoader
+from src.data_processing.WebLoader import WebLoader
+from src.config import KNOWLEDGE_PDF_PATH, KNOWLEDGE_WEB_URL_PATH
 
 
 class KnowledgeBase:
@@ -38,3 +38,4 @@ class KnowledgeBase:
             self.load_knowledge()
         
         return self.knowledge
+

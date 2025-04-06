@@ -1,6 +1,6 @@
-from KnowledgeBase import KnowledgeBase
+from src.database.KnowledgeBase import KnowledgeBase
 from langchain_community.vectorstores import FAISS
-from ai_integration import EmbeddingsManager
+from src.ai_integration.EmbeddingsManager import EmbeddingsManager
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 

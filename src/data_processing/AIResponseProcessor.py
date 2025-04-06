@@ -5,9 +5,9 @@ from langchain.chains.retrieval import create_retrieval_chain
 from langchain_core.runnables.base import Runnable
 from langchain_core.runnables import RunnableLambda
 from langchain_google_genai.chat_models import ChatGoogleGenerativeAIError
-from database.KnowledgeRetriever import KnowledgeRetriever
-from ai_integration.LLMManager import LLMManager
-from data_processing.InputPreProcessor import InputPreProcessor
+from src.database.KnowledgeRetriever import KnowledgeRetriever
+from src.ai_integration.LLMManager import LLMManager
+from src.data_processing.InputPreProcessor import InputPreProcessor
 
 # Configurar o logger
 logging.basicConfig(
